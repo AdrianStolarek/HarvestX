@@ -1,2 +1,2 @@
 # HarvestX
-Web scraper build using python and Beautiful Soup.
+Web scraper built using python and Beautiful Soup.
