@@ -4,8 +4,6 @@ A web scraper designed to extract tweets from specified Twitter (X) user profile
 
 # How to Use
 
-Set Up:
-
 Ensure you have Python installed.
 Install the required libraries using pip:
 sh
