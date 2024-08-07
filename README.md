@@ -14,17 +14,21 @@ Configuration:
 
 Update the ChromeDriver path in the script if necessary.
 Ensure you have the latest version of ChromeDriver compatible with your Chrome browser.
+
 Running the Scraper:
 
 Use the provided collect_tweets function to scrape tweets from specified user profiles.
 The script will save the scraped tweets to a JSON file and then analyze the tweets, saving the results to another JSON file.
+
 Analyzing Data:
 
 Utilize the LLM API to extract keywords and generate summaries from the tweets.
-Future Work
-Graphical Representation: Implement functionality to visualize the parsed data in a graph format.
-Enhanced Scraping Capabilities: Extend scraping capabilities to other social media platforms and content types.
-Contribution
+
+Graphical Representation: 
+
+Implementation of a functionality to visualize the parsed data in a graph format.
+
+
 Feel free to contribute to this project by forking the repository and submitting pull requests. Any suggestions or improvements are welcome.
 
 License
