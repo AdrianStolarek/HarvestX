@@ -6,7 +6,6 @@ A web scraper designed to extract tweets from specified Twitter (X) user profile
 
 Ensure you have Python installed.
 Install the required libraries using pip:
-sh
 ```
 pip install selenium beautifulsoup4 pandas webdriver_manager requests transformers
 ```
