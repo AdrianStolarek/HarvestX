@@ -49,7 +49,7 @@ queries = ["realDonaldTrump", "elonmusk", "ElbridgeColby", "TuckerCarlson", "JDV
 all_tweets = []
 
 for query in queries:
-    tweets = collect_tweets(query, count=5)
+    tweets = collect_tweets(query, count=2)
     all_tweets.extend(tweets)
 
 json_data = json.dumps(all_tweets, indent=4)

@@ -1,15 +1,15 @@
 from transformers import pipeline
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoTokenizer, LongT5ForConditionalGeneration
 
-#model_name = "apple/OpenELM-270M-Instruct"
-model_name = "gpt2"
-tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained(model_name)
-nlp = pipeline("text-generation", model=model, tokenizer=tokenizer, trust_remote_code=True)
+model_name = "Stancld/longt5-tglobal-large-16384-pubmed-3k_steps"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = LongT5ForConditionalGeneration.from_pretrained(model_name)
+nlp = pipeline("summarization", model=model, tokenizer=tokenizer, trust_remote_code=True)
 
 def analyze_text_with_local_llm(text):
-    response = nlp(text, max_new_tokens=150, num_return_sequences=1)
-    return response[0]['generated_text']
+    input_text = "Summarize: " + text
+    response = nlp(input_text, max_length=10, min_length=10, num_return_sequences=1)
+    return response[0]['summary_text']
 
 def extract_keywords_and_summary(tweet_text):
     summary = analyze_text_with_local_llm(tweet_text)
