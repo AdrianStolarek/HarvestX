@@ -23,6 +23,24 @@ Analyzing Data:
 
 Utilize the LLM API to extract keywords and generate summaries from the tweets.
 
+Current model is just a simple exemplary one. It is sugested to use more sophisticated LLM such as:
+```
+inceptionai/jais-family-30b-8k-chat
+```
+Simply change model_name and add imports from below:
+
+```
+import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
+```
+Also model and tokenizer have to be set to:
+
+```
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", trust_remote_code=True)
+```
+In this case, 'summarization' keyword has to be changed to 'generated_text'. Same for response[0]['summary_text'] (response[0]['generated_text']).
+
 Graphical Representation: 
 
 Implementation of a functionality to visualize the parsed data in a graph format.
