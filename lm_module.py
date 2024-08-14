@@ -8,11 +8,11 @@ model = AutoModelForCausalLM.from_pretrained(model_name)
 nlp = pipeline("text-generation", model=model, tokenizer=tokenizer, trust_remote_code=True)
 
 def analyze_text_with_local_llm(text):
-    response = nlp(text, max_length=50, num_return_sequences=1)
+    response = nlp(text, max_new_tokens=150, num_return_sequences=1)
     return response[0]['generated_text']
 
 def extract_keywords_and_summary(tweet_text):
-    #Space for pushing data into df
     summary = analyze_text_with_local_llm(tweet_text)
     keywords = summary.split()
+    #Space for pushing data into df
     return keywords, summary

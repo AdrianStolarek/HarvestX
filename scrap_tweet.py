@@ -59,7 +59,6 @@ analyzed_tweets = []
 for tweet in all_tweets:
     keywords, summary = extract_keywords_and_summary(tweet["text"])
     analyzed_tweet = {
-        "user": tweet["user"],
         "text": tweet["text"],
         "keywords": keywords,
         "summary": summary
