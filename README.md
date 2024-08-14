@@ -29,6 +29,3 @@ Implementation of a functionality to visualize the parsed data in a graph format
 
 
 Feel free to contribute to this project by forking the repository and submitting pull requests. Any suggestions or improvements are welcome.
-
-License
-This project is licensed under the MIT License.
