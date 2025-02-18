@@ -1,4 +1,4 @@
-# HarvestX
+# Sensus
 
 A web scraper designed to extract tweets from specified Twitter (X) user profiles using Selenium and BeautifulSoup. Technologies Used: Selenium (4.0.0), BeautifulSoup (4.10.0), Pandas (1.3.3), Requests (2.26.0), WebDriverManager (3.5.2), ChromeDriver (latest version compatible with your Chrome browser). Collect tweets based on user profiles. Extract relevant information such as username, tweet content, creation date, retweet count, and favorite count. Save the scraped tweets in JSON format. Analyze the tweets by extracting keywords and generating summaries using a Language Model Module (LLM API). Save the analyzed tweets in a JSON file.
 
